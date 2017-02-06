@@ -1,20 +1,17 @@
 var Twitter = require('twitter');
 var Emoji = require('node-emoji');
-var Env = require('node-env-file');
 var Pool = require('pg').Pool;
 var Async = require('async');
 
 var postgres_pool = new Pool({
-  user: 'postgres', //env var: PGUSER
-  database: 'angela', //env var: PGDATABASE
-  password: '', //env var: PGPASSWORD
-  host: 'db', // Server hosting the postgres database
-  port: 5432, //env var: PGPORT
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 10000, // how long a client is allowed to remain idle before being closed
+  user: 'postgres',
+  database: 'angela',
+  password: '',
+  host: 'db',
+  port: 5432,
+  max: 10,
+  idleTimeoutMillis: 10000
 });
-
-Env(__dirname + '/.env');
 
 var twitter_client = new Twitter({
   consumer_key: process.env.CONSUMER_KEY,
