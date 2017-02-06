@@ -1,2 +1,2 @@
-node_modules/*
-.env
+twitter_bot/node_modules/*
+twitter_bot/.env

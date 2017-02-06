@@ -1,0 +1,15 @@
+version: "2.0"
+
+services:
+
+  twitter_bot:
+    build: ./twitter_bot
+    volumes:
+      - ./twitter_bot:/tmp/
+    links:
+      - db
+
+  db:
+    build: ./db
+    ports:
+      - "5442:5432"

@@ -9,7 +9,9 @@
   "dependencies": {
     "twitter": "1.7.0",
     "node-emoji": "1.5.1",
-    "node-env-file": "0.1.8"
+    "node-env-file": "0.1.8",
+    "pg": "6.1.2",
+    "async": "2.1.4"
   },
   "author": "",
   "license": "ISC"
